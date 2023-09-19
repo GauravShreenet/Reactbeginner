@@ -1,12 +1,27 @@
 import { Paragraph } from "./Paragraph";
+import { useState} from 'react';
 
 const Display = () => {
-    const counter = 20;
+    // let counter = 20;
+
+    const [counter, setCounter] = useState(20);
+
+    const increament = () => {
+        // console.log(counter)
+        setCounter(counter + 1);
+    }
+
+    const decrement = () => {
+        setCounter(counter - 1);
+    }
+
     return (
     <div>
-        <div>{counter}</div>
+        <Paragraph counter ={counter} name="Gaurav" phone="1213"/>
+        <button onClick = {increament}>+</button>
+        <button onClick = {decrement}>-</button>
         <div>0.00</div>
-        <Paragraph />
+        {/* <Paragraph /> */}
     </div>
     );
 };

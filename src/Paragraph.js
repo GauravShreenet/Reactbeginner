@@ -1,3 +1,9 @@
-export const Paragraph = () => {
-    return <p>kdvmk'lmn ncklnknlanl;kdsnfa klndfkl;anfakldfbfkasbfdk kjbafkjds</p>;
+export const Paragraph = ({counter, name, phone}) => {
+
+    // const {counter} = props;
+    return (
+        <div>
+            {counter} - {name} - {phone}
+        </div>
+    );
 }
